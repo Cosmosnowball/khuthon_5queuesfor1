@@ -33,7 +33,7 @@ function createDiv() {
     button1.className = "pro_crt";
     button1.innerHTML ="문제 생성";
     newDiv.appendChild(button1);
-
+    
     var p2 = document.createElement('div');
     p2.innerHTML = "<hr class='line'>";
     newDiv.appendChild(p2);
