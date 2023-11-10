@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>시험지 파일 목록</title>
-    <script>
-        category = decodeURIComponent(location.href.split("?")[1]);
-        console.log(category);
-    </script>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -112,17 +108,14 @@
     
 </head>
 <body>
-    <h1 id = "header"></h1>
-    <script>
-        element = document.getElementById("header");
-        element.innerText = category + "시험지 파일 목록";
-    </script>
+    <h1>시험지 파일 목록</h1>
+    <!-- 표시할 문제들 들어가는 부분 -->
 
     <div class="file-container">
         <div class="file-item">
-            <div class="file-name">list</div>
+            <div class="file-name">list.pdf</div>
             <div class="buttons">
-                <button class="start-button" onclick="startExam('list_test.html')">시험 시작!</button>
+                <button class="start-button" onclick="startExam('list.pdf')">시험 시작!</button>
                 <button class="recommend-button" id="recommendButton1" onclick="recommend(1)">추천</button>
                 <span class="recommend-count" id="count1">0</span>
             </div>
@@ -130,17 +123,17 @@
             
         </div>
         <div class="file-item">
-            <div class="file-name">queue</div>
+            <div class="file-name">queue.pdf</div>
             <div class="buttons">
-                <button class="start-button" onclick="startExam('queue_test.html')">시험 시작!</button>
+                <button class="start-button" onclick="startExam('queue.pdf')">시험 시작!</button>
                 <button class="recommend-button" id="recommendButton2" onclick="recommend(2)">추천</button>
                 <span class="recommend-count" id="count2">0</span>
             </div>
         </div>
         <div class="file-item">
-            <div class="file-name">linked_list</div>
+            <div class="file-name">linked_list.pdf</div>
             <div class="buttons">
-                <button class="start-button" onclick="startExam('linked_list_test.html')">시험 시작!</button>
+                <button class="start-button" onclick="startExam('linked_list.pdf')">시험 시작!</button>
                 <button class="recommend-button" id="recommendButton3" onclick="recommend(3)">추천</button>
                 <span class="recommend-count" id="count3">0</span>
             </div>
@@ -156,9 +149,7 @@
 
         function startExam(filename) {
             // Replace this with actual exam start logic
-            alert('시험 시작!');
-            
-            window.location.href = filename;
+            alert('시험 시작: ' + filename);
         }
 
         function recommend(fileNumber) {
@@ -179,7 +170,7 @@
 
         function goBack() {
             // Replace this with your back button functionality
-            window.location.href = 'main.html';
+            alert('뒤로 가기');
         }
         
         

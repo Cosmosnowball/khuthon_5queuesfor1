@@ -1,28 +1,28 @@
 const mysql = require('mysql');
  
 const db = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : '7462',
+    host     : '0.0.0.0',
+    user     : 'clinet',
+    password : '1234',
     database : '기계학습'
   });
  
 const _use = () =>{
-  db.query('USE 기계학습',(err,result)=>{
+  db.query('USE world',(err,result)=>{
     if(err) throw(err);
     console.log("USE result : ",result);
   })
 }
  
 const _select = () =>{
-  db.query('SELECT * FROM 기초기초기초기계학습',(err,result)=>{
+  db.query('SELECT * FROM aa',(err,result)=>{
     if(err) throw(err);
     console.log("SELECT result : ", result);
   })
 }
  
 const _insert = () =>{
-  let sql = "INSERT 기초기초기초기계학습(문제, 답) VALUES('임시 문제', '정답입니다');"
+  let sql = "INSERT aa(a) VALUES('느금마');"
   db.query(sql,(err,result)=>{
     if(err) throw(err);
     console.log("INSERT result: ",result);

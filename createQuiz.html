@@ -1,32 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <title>퀴즈 생성 페이지</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        category = decodeURIComponent(location.href.split("?")[1]);
+        console.log(category);
+    </script>
+    <title>퀴즈를 내봅시다</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body>
-    <h1>게시판</h1>
+    <h1>어떤 유형의 퀴즈를 만들까요?</h1>
+    <script>
+        document.write(category + "에 대한 ");
+    </script>
+    <button onclick="redirectToQuiz('OX')">OX 퀴즈 만들기</button>
+    <button onclick="redirectToQuiz('MultipleChoice')">단답형 퀴즈 만들기</button>
 
-    <!-- 게시물 작성 양식 -->
-    <form action="post.php" method="post">
-        <label for="username">사용자 이름:</label>
-        <input type="text" id="username" name="username" required><br>
-        <label for="message">메시지:</label>
-        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
-        <input type="submit" value="게시">
-    </form>
-
-    <!-- 게시물 목록 -->
-    <h2>게시물 목록</h2>
-    <ul>
-        <li>
-            <strong>사용자1:</strong>
-            게시물 내용 1
-        </li>
-        <li>
-            <strong>사용자2:</strong>
-            게시물 내용 2
-        </li>
-        <!-- 게시물이 더 많이 있을 수 있음 -->
-    </ul>
+    <script>
+        function redirectToQuiz(type) {
+            var quizUrl = 'file:///C:/Users/nkmj0/Desktop/%EB%8C%80%ED%95%99_%EC%88%98%EC%97%85_%EC%9E%90%EB%A3%8C/2023_khuthon/writing.html';
+            
+            // You can modify the quizUrl based on the quiz type if needed
+            
+            window.location.href = quizUrl;
+        }
+    </script>
 </body>
 </html>
